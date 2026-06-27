@@ -31,18 +31,4 @@ def check_input(amount_due):
   return coin_inserted
 
  
-
-
-
-     
-
-  
-  
-    
-
-
-
-  
-
-
 main()
