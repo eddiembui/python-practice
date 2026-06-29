@@ -25,7 +25,7 @@ def main():
   fruit_input = input("Enter a fruit: ").title()
   calories = fruits_calories.get(fruit_input)
   if calories == None:
-    print(end = "")
+    return 
   else:
     print(f"Calories: {calories}")
 
