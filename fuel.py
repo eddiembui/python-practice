@@ -11,7 +11,7 @@ def main():
       index_of_separator = user_gauge.index("/")
       x = int(user_gauge[0:index_of_separator])
       y = int(user_gauge[(index_of_separator + 1):]) 
-    except:
+    except (ValueError):
       pass
     else:
       if x >= 0 and y >= 1 and x <= y:
