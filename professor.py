@@ -1,39 +1,11 @@
 import random 
 
 def main():
-  get_level()
-  
-
-def get_level():
-  while True:
-    try:
-      level_input = int(input("Level: "))
-      if level_input == 1 or level_input == 2 or level_input == 3:
-        generate_integer(level_input)
-        break
-      else:
-        print("Input is not in range")
-        
-    except ValueError:
-      print("Input is a str")
-      
-    
-
-
-def generate_integer(level):
+  user_level = get_level()
   i = 0
   score = 0
   while i < 10:
-    if level == 1:
-      x = random.randint(0,6)
-      y = random.randint(0,6)
-    elif level == 2:
-      x = random.randint(7,12)
-      y = random.randint(7,12)
-    elif level == 3:
-      x = random.randint(13,18)
-      y = random.randint(13,18)
-
+    x, y = generate_integer(user_level)
     wrong_attempts = 0
     while wrong_attempts != 3:
       try:
@@ -58,5 +30,37 @@ def generate_integer(level):
     print(f"Score: {score}")
   
 
+def get_level():
+  while True:
+    try:
+      level_input = int(input("Level: "))
+      if level_input == 1 or level_input == 2 or level_input == 3:
+        
+        return level_input
+        
+      else:
+        print("Input is not in range")
+        
+    except ValueError:
+      print("Input is a str")
+      
+    
 
-main()
+
+def generate_integer(level):
+  
+    if level == 1:
+      x = random.randint(0,6)
+      y = random.randint(0,6)
+    elif level == 2:
+      x = random.randint(7,12)
+      y = random.randint(7,12)
+    elif level == 3:
+      x = random.randint(13,18)
+      y = random.randint(13,18)
+    return x, y
+    
+
+
+if __name__ == "__main__":
+  main()
