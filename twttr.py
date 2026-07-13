@@ -1,15 +1,20 @@
 def main():
   userinput = input("Input: ")
-  vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
-  userinput = list(userinput)
   # loop through userinput list to check if it contains a vowel
+  
+  print(shorten(userinput))
+
+def shorten(word):
+  vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"]
+  word_list = list(word)
   consonants = []
-  for letter in userinput:
+  for letter in word_list:
       if letter not in vowels:
         consonants.append(letter)
         
 
   consonants = "".join(consonants)
-  print(f"Output: {consonants}")
-
-main()
+  return f"{consonants}"
+   
+if __name__ == "__main__":
+  main()
