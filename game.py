@@ -17,11 +17,11 @@ def check_guess(theguess):
       user_guess = input("Guess: ")
       if int(user_guess) > 0:
         if int(user_guess) > theguess:
-          print("Too large")
+          print("Too large!")
         elif int(user_guess) < theguess:
-          print("Too small")
+          print("Too small!")
         else:
-          print("Just right")
+          print("Just right!")
           break
           
     except(ValueError):
