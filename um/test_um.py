@@ -20,3 +20,6 @@ def test_word_beginning_and_ending_with_um():
 
 def test_umum():
   assert count("umum") == 0
+
+def test_case_insensitive():
+  assert count("Um, hello") == 1
