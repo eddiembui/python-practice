@@ -7,7 +7,7 @@ def main():
       name_input = input("Name: ")
       names_list.append(name_input)
     except(EOFError):
-      print(f"Adieu, adieu, to {p.join(names_list)}")
+      print(f"\nAdieu, adieu, to {p.join(names_list)}")
       break
   
 main()
